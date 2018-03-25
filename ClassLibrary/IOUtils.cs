@@ -29,7 +29,7 @@ namespace ClassLibrary
             }
         }
 
-        public static byte [] FileToBytes(string path)
+        public static byte[] FileToBytes(string path)
         {
             byte[] fileBytes = File.ReadAllBytes(path);
             return fileBytes;

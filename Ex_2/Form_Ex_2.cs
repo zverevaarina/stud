@@ -47,7 +47,7 @@ namespace Ex_2
         private void buttonSwap_Click(object sender, EventArgs e)
         {
             //FileList = new File_Ex_2(openFileDialog.FileNames);
-            file.Rename();
+            file.Swap();
             labelSwap.Text = "Программа завершила работу";
         }
 
@@ -57,7 +57,7 @@ namespace Ex_2
             {
                 try
                 {
-                    IOUtils.BytesToFile(saveFileDialog1.FileName, file.FileText1);
+                    IOUtils.BytesToFile(saveFileDialog1.FileName, file.Files[0]);
                     labelSave1.Text = "Файл сохранен";
                 }
                 catch (Exception exp)
@@ -73,7 +73,7 @@ namespace Ex_2
             {
                 try
                 {
-                    IOUtils.BytesToFile(saveFileDialog2.FileName, file.FileText2);
+                    IOUtils.BytesToFile(saveFileDialog2.FileName, file.Files[1]);
                     labelSave2.Text = "Файл сохранен";
                 }
                 catch (Exception exp)
